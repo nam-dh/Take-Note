@@ -1,0 +1,22 @@
+<% if flash[:notice] %>
+	<%= flash[:notice] %>
+<% end %>
+<h1><center>Search note</center></h1>
+
+<%= form_tag do %>
+
+Course<br>
+<%= select_tag :course_spec, options_for_select(@course_select_list) %>
+<br/>
+Written time<br>
+From<br>
+<%= date_select("date", "from", :default => { :year => 2009 }) %><br>
+To<br>
+<%= date_select("date", "to") %><br>
+Keyword<br>
+<%= text_field_tag 'key', '' %>
+
+<br><br><br>
+<center><%= submit_tag 'Search' %></center>
+<% end %>
+

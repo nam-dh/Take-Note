@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" >
+<html>
+	<head>
+		<title>Web Note - a new way to take note in class</title>
+		<%= stylesheet_link_tag "webnote" , :media => "all" %>
+		<%= javascript_include_tag :defaults %>
+		
+	</head>
+	<body>
+		<div id="container">
+			<div id="company"><img src="images/webnotehappy-header.png" alt="Webnote - a better bookmark manager for your Mac - Surf. Write. Remember."></div>
+			<div id="navbar">
+			<ul>
+				<li id="currentpage"><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">FAQ</a></li>
+				<li><a href="#">Contact</a></li>
+				<li><%= link_to 'Sign in/Sign up', login_path %></li>
+			</ul>
+		</div>
+		<%= yield %>
+		<div id="footer">© 2010 Web Note - Created by Doan Hoai Nam - Keio University.</div>
+	   </div>
+	</body>
+</html>

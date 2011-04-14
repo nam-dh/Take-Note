@@ -1,0 +1,33 @@
+<div class="log-form">
+	<fieldset>
+		<legend>Please Log In</legend>
+		<% if flash[:notice] %>
+		<%= flash[:notice] %>
+		<% end %>
+		<% form_tag do %>
+		<table>
+		<tr>
+			<td><label for="name">Account</label></td>
+			<td><%= text_field_tag :acc, params[:acc] %></td>
+		</tr>
+		<tr>
+			<td><label for="password">Password</label></td>
+			<td><%= password_field_tag :password, params[:password] %></td>
+		</tr>
+		<tr>
+			<td><%= submit_tag "Login" %></td>
+		</tr>
+		</table>
+		<% end %>
+			If you don't have an account, click <%= link_to 'here', signup_path %> to sign up.
+
+	</fieldset>
+</div>
+<div id="appDetail">
+	<h2>Web Note - a new way to take note in class</h2>
+	<p>Web Note is a web site that helps you organize, bookmark, and make notes in class online.</p>
+	<p>You can create course easily. In each course, you can create and manage your notes.</p>
+	<p>It's very easy in Web Note to search your note, based on Course and Created time.</p>
+	<br>
+	<p class="userquote" align=center>What are you waiting for? Please try Web Note now!</p>
+</div>

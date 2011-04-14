@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" >
+<html>
+	<head>
+		<title>Web Note - a new way to take note in class</title>
+		<%= stylesheet_link_tag "webnote" , :media => "all" %>
+		<%= javascript_include_tag :defaults %>
+		
+	</head>
+	<body>
+		<div id="container">
+			<div id="company">
+				<%= image_tag("webnote-header.png") %>
+			</div>
+			
+			<div id="content">
+		
+				<%= yield :layout %>           
+        	</div>    
+        	<div id="sidebar">
+        	<ul>
+            	<li><div class="banana"><%= link_to 'Account Information', user_path(@user) %></div>
+					
+				<ul>
+  					<li><strong>Account: </strong><%= @user.acc %></li>
+  					<li><strong>Full name: </strong><%= @user.name %></li>
+  					<li><strong>E-mail: </strong><%= @user.mail %></li>
+					<li>
+						<%= link_to 'Edit Information', edit_user_path(@user) %> |
+						<%= link_to 'Log out', logout_path %>
+					</li>
+				</ul>
+			</ul>
+			<ul>
+				<li><div class="banana"><%= link_to 'List Course', user_path(@user) %></div>
+				<ul>
+					<table>
+					<% @courses.each do |course| %>
+					<% @title = course.name + ' (' + course.number.to_s + ')' %>
+					<tr>
+						<td><strong><%= link_to @title, course %></strong></td>
+	    				<td><%= link_to 'Edit', edit_course_path(course) %></td>
+	   					<td><%= link_to 'Destroy', course, :confirm => 'Are you sure?', :method => :delete %></td>
+					</tr>
+					<% end %>
+					</table>
+					<li>
+						<%= link_to 'New Course', new_course_path %>
+					</li>
+					
+				</ul>
+				</li>	
+			</ul>	
+			
+			<ul>
+				<li><div class="banana"><%= link_to 'Search note', search_path(@user) %></div>
+				</li>	
+			</ul>
+
+		</div>
+		<br />
+
+
+	</div>
+	<div id="footer">© 2010 Web Note - Created by Doan Hoai Nam - Keio University.</div>
+	</div>
+	</body>
+</html>

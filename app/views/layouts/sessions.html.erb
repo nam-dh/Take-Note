@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" >
+<html>
+	<head>
+		<title>Web Note - a new way to take note in class</title>
+		<%= stylesheet_link_tag "webnote" , :media => "all" %>
+		<%= javascript_include_tag :defaults %>
+		
+	</head>
+	<body>
+		<div id="container">
+			<div id="company">
+				<%= image_tag("webnote-header.png") %>
+
+			</div>
+			
+			<div id="content"> 
+				<%= yield :layout %>
+			</div>
+			<div id="sidebar">
+           		<ul>
+               		<li><div class="banana"><a href="">Webnote Application 2.0</a></div>
+               		<ul>
+                 	<li></li>
+                 	<li></li>
+                 	<li>Now you can use Web Note in your device:</li>
+                 	<li>Smart phone: iPhone, Android</li>
+                 	<li>Windows: 7, XP</li>
+                 	<li>Mac OS X 10.4 or later</li>
+                 	<li>Snow Leopard compatible</li>
+        			<li><b>Automatic synchronous</b></li>
+					</ul>
+            		</li>
+				</ul>
+                       
+	         <ul>
+               <li><div class="banana"><a href="">Contact us</a></div>
+				<ul>
+						<li>Tell me how you think about Web Note</li>
+						<li>Help me to improve features</li>
+						<li>Please mail to: perry@sfc.wide.ad.jp</li>
+					</ul>
+					</li>
+            </ul>
+            
+
+            
+		</div>
+		<div id="footer">© 2010 Web Note - Created by Doan Hoai Nam - Keio University.</div>
+	   </div>
+	</body>
+</html>

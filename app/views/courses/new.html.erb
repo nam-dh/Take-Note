@@ -1,0 +1,30 @@
+<h1><center>Create new course</center></h1>
+
+<%= form_for(@course) do |f| %>
+  <% if @course.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@course.errors.count, "error") %> prohibited this course from being saved:</h2>
+
+      <ul>
+      <% @course.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :comment %><br />
+    <%= f.text_field :comment %>
+  </div>
+  <br><br>
+  <div class="actions">
+    <%= f.hidden_field :user_id, :value => session[:user_id]%>
+	<%= f.hidden_field :number, :value => 0 %>
+    <%= submit_or_cancel(f) %>
+  </div>
+<% end %>

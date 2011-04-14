@@ -1,0 +1,194 @@
+  body, html{
+  	width: 1000px;
+  	margin: 0 auto;
+  	padding: 0;
+  	color:  #000;
+     font: 12px verdana, arial, helvetica, sans-serif;
+     line-height: 19px;
+     background: #eee;;
+  }
+  
+  body {
+     min-width:1000px;
+  }
+  
+  #container { 
+     margin-top: 10px;
+    	width: 1024px;
+    	background: #fff;
+    	border: 2px solid #c0c0c0;
+	text-align: center;
+  	}
+  
+  #company {
+  	height: 140px;
+  	width: 1000px;
+  	margin: 0px auto;
+  	padding: 10px;
+  	text-align: center;
+  	background: #FFF;
+  	font-style: bold;
+  }
+  
+  #companyTagline {
+     font-size: 10px;
+     color: #333333
+  }
+
+  #content {
+  	text-align: left;
+  	width: 698px;
+  	padding: 10px;
+  	margin: 0;
+  	float: left;
+    	background: #FFFFFF;
+     
+  }
+
+#content h1 {
+	line-height: 26px;
+}
+  
+  #appTagline {
+     padding: 0px;
+     margin: 0;
+  }
+  
+  #appAlternateTagline {
+    font-size: 12px;
+    color: #444;
+    padding: 3px;
+    margin: 0, 10px;
+  }
+  
+  #appSummary {
+     text-align: center;
+  }
+  
+  #appQuestions {
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+  }
+
+
+  #sidebar {
+     width: 300px;
+     	float: right;
+     	text-align: left;
+     	margin: 0;
+     	padding: 3px;
+     	background: #FFFFFF;
+  }
+  
+  #sidebar ul {
+  	color: #030;
+  	font-weight: bold;
+  	list-style-type: none;
+  	margin: 2px;
+  	padding-left: 10px;
+  	width: 280px;
+  	}
+
+  #sidebar ul li {
+  	color: #242424;
+  	font-weight: bold;
+  	margin-top: 15px;
+  	padding: 5px;
+  	border: 1px solid #D7D7D7; 
+  	background: #c0c0c0;
+  	}
+  	
+  #sidebar ul ul {
+  	font-weight: normal;
+  	line-height: 100%;
+  	list-style-type: none;
+  	margin: 0;
+  	padding: 0;
+  	text-align: left;
+  	}
+
+  #sidebar ul ul li {
+  	background: none;
+  	font-weight: normal;
+	margin-right: 5px;
+  	margin-top: 5px;
+  	padding: 1px;
+  	border: 0;
+  	line-height: 15px;
+	padding-left: 15px;
+	}
+
+	#sidebar ul ul table {
+  	background: none;
+  	font-weight: normal;
+	margin-right: 5px;
+  	margin-top: 5px;
+  	padding: 1px;
+  	border: 0;
+  	line-height: 15px;
+	padding-left: 15px;
+	}
+  	
+  .banana {
+     color: #fff;
+	font-weight: bold;
+     margin-top: 0px;
+     padding: 5px;
+     text-align: center;
+     font-size: 18px;
+     line-height: 26px;
+     height: 30px;
+  }
+
+.banana a {
+	color: #df1313;
+}
+
+.banana a:hover {
+	color: #ffffff;
+	background-color:#000000;
+	font-weight: bold;
+}
+
+#liteLink a {
+   color: #df1313;
+	font-weight: bold;
+   margin-top: 0px;
+   padding: 5px;
+   text-align: center;
+   font-size: 14px;
+   line-height: 26px;
+   height: 30px;
+}
+
+        
+  #footer {
+     clear:both;
+     background: #c0c0c0;
+     text-align: center;
+     margin-left: 0px;
+     font-size: 10px;
+  }
+
+
+
+.userquote {
+	margin:15px;
+	padding:5px;
+	background:#c0c0c0;
+}
+
+.liteFeature {
+	background:#eee;
+}
+
+#appScreenshots img {
+	border:0;
+}
+
+.newFeature {
+	margin-left: 15px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}

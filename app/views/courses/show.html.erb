@@ -1,0 +1,24 @@
+<% if flash[:notice] %>
+	<%= flash[:notice] %>
+<% end %>
+<h1><center><%= @course.name %></center></h1>
+<h3><center>-- <%= @course.comment %> -- </center></h3>
+<%= token_tag %> 
+<p align="right">
+<%= link_to 'Edit', edit_course_path(@course) %> |
+<%= link_to 'Delete', destroy_course_path, :confirm => 'Are you sure?', :method => :delete %>
+</p>
+<p id="notice"><%= notice %></p>
+<%= link_to 'Create new note', new_note_path(:course => @course)  %>
+
+<% @notes.each do |note| %>
+	<h2><center><%= note.title %></center></h2>
+		<p align=center><strong>Date: </strong><%= note.date %><strong> Course: </strong>
+		<% @course = Course.find(note.course_id)%>
+		<%=@course.name  %></p>
+		<p><%= note.content %></p>
+		<td><%= link_to 'Edit', edit_note_path(note) %></td>
+    	<td><%= link_to 'Destroy', note, :confirm => 'Are you sure?', :method => :delete %></td>
+<% end %>
+
+<br />
